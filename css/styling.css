@@ -1,0 +1,43 @@
+header {
+    font-family: Verdana;
+    text-align: center;
+    background-color: lightblue;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#myfav {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#myfav td,
+#myfav th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-family: Verdana;
+}
+
+#myfav tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#myfav tr:hover {
+    background-color: #ddd;
+}
+
+#myfav th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    
+}
+
+#gpa {
+    text-align: right;
+}
+.types {
+    text-align: center;
+}
