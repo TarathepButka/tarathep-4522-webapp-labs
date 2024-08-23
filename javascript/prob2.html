@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt accepting for positive integers until the user enters a negative integer
+    </title>
+    <script>
+
+        function readInput() {
+            let array = new Array();
+            let checkloop = true;
+            while (checkloop) {
+                let posnum = parseInt(prompt('Enter a integer (a negative integer to quit):'));
+                if (posnum > 0 && posnum % 1 == 0) {
+                    checkloop = true;
+                    array.push(posnum);
+                } else if (posnum < 0 && posnum % 1 == 0) {
+                    checkloop = false;
+                } else {
+                    checkloop = true;
+                }
+            } return array;
+        }
+
+        function displayStats(array) {
+            let sum = 0;
+            let listposnum = '';
+
+            if (array.length === 0) {
+                alert('For the list that is empty, the average is 0, the minimum is 0, and the maximum is 0');
+                return;
+            }
+
+            for (let i = 0; i < array.length; i++) {
+                listposnum += array[i];
+                if (i < array.length - 1) {
+                    listposnum += ",";
+                }
+                sum += array[i];
+            }
+
+            let avg = sum / array.length;
+            let min = Math.min(...array);
+            let max = Math.max(...array);
+
+            alert('For the list ' + listposnum + ' the average is ' + avg.toFixed(2) + ' the minimum is ' + min + ' and the maximum is ' + max);
+        }
+
+        list = readInput();
+        //displayStats(list);
+        if (list.length > 0) {
+            displayStats(list);
+        } else {
+            alert('For the list that is empty, the average is 0, the minimum is 0, and the maximum is 0')
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Statistics Calculator!</h1>
+    <h3>Write the web app to promt accepting for a positive integer until the user enters a negative interger</h3>
+    <ul>
+        <li>If the entered text is not a positive integer number, then the web app will keep asking for a number until
+            the valid positive interger is entered</li>
+        <li>If entered text is a negative interger, then the web app will show the satatics (average, min, max) of all
+            entered positive integers</li>
+    </ul>
+    <h3>Hint:</h3>
+    <ol>
+        <li>You need to implement functions to check whether an entered text is a positive interger or not and whether
+            an entered text is a negative interger or not</li>
+        <li>You need to implement functions to compute average, min, and max of list of integer</li>
+    </ol>
+</body>
+
+</html>
