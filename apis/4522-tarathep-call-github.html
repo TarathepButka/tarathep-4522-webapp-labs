@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GitHub User Info</title>
+    <style>
+      #avatar {
+        text-align: center;
+      }
+      #avatar img {
+        border: 5px solid orangered;
+        border-radius: 50%;
+        width: 200px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="avatar"></div>
+
+    <script>
+      fetch(`https://api.github.com/users/TarathepButka`)
+        .then((response) => response.json())
+        .then((data) => {
+          const userInfo = document.getElementById("avatar");
+          const Link = document.createElement("a");
+          Link.href = data.html_url;
+          Link.target = "_blank";
+          Link.style.color = "orangered";
+          Link.textContent = data.name;
+          const nameHeader = document.createElement("h1");
+          nameHeader.appendChild(Link);
+
+          const avatarImg = document.createElement("img");
+          avatarImg.src = data.avatar_url;
+
+          userInfo.appendChild(nameHeader);
+          userInfo.appendChild(avatarImg);
+        })
+        .catch((error) => {
+          console.error("Error fetching GitHub:", error);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple DOM Manipulation</title>
+  </head>
+  <body>
+    <h1 id="main-title">Welcome to DOM Manipulation</h1>
+    <div id="content">
+      <p class="paragraph">This is the first paragraph.</p>
+      <p class="paragraph">This is the second paragraph.</p>
+      <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+      </ul>
+    </div>
+    <button id="add-item">Add Item</button>
+    <script>
+      var title = document.querySelector("h1");
+      title.innerHTML = "DOM Manipulation Mastery";
+
+      var paragraphEL = document.getElementsByClassName("paragraph");
+      for (let i = 0; i < paragraphEL.length; i++) {
+        paragraphEL[i].style.backgroundColor = "yellow";
+        paragraphEL[i].style.padding = "5px";
+      }
+
+      var listEL = document.getElementById("list");
+      var newItem = document.createElement("li");
+      var newText = document.createTextNode("New Item");
+      newItem.appendChild(newText);
+      listEL.appendChild(newItem);
+
+      let itemcount = 3;
+      let addItem = () => {
+        itemcount++;
+        var newli = document.createElement("li");
+        var newTextEl = document.createTextNode("Item " + itemcount);
+        newli.appendChild(newTextEl);
+        listEL.appendChild(newli);
+      };
+
+      var button = document.getElementById("add-item");
+      button.addEventListener("click", addItem);
+    </script>
+  </body>
+</html>
