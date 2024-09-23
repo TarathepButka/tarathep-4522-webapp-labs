@@ -5,5 +5,15 @@
     "progress": "^2.0.3",
     "readline": "^1.3.0"
   },
-  "type": "module"
+  "type": "module",
+  "name": "tarathep-4522-exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "calculator": "node calculator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
