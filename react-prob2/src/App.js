@@ -11,7 +11,7 @@ function GitHubInfo() {
   return (
     <div className="App">
       <h1>{userInfo.alt}</h1>
-      <GitHubAvatar userInfo={userInfo} size={50} />
+      <GitHubAvatar userInfo={userInfo} size={400} />
       <GitHubRepoURL userInfo={userInfo} />
     </div>
   );
