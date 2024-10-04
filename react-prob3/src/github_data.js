@@ -2,7 +2,7 @@ export const GitHubAvatar = ({ size = 50, userInfo }) => {
   return (
     <div>
       <img
-        src={userInfo.imgurl}
+        src={userInfo.imgURL}
         alt="GitHub Avatar"
         width={size}
         height={size}
