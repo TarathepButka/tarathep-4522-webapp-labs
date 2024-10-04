@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const GitHubAvatar = () => {
   return (
     <div>
-      <img 
-        src="https://avatars.githubusercontent.com/u/119283428?v=4" 
-        alt="GitHub Avatar" 
+      <img
+        src="https://avatars.githubusercontent.com/u/119283428?v=4"
+        alt="GitHub Avatar"
       />
     </div>
   );
@@ -14,10 +14,10 @@ const GitHubAvatar = () => {
 const GitHubRepoURL = () => {
   return (
     <div>
-      <a 
+      <a
         href="https://github.com/TarathepButka"
-        target="_blank" 
-        rel="noopener noreferrer" 
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <h3>My GitHub repository</h3>
       </a>
@@ -27,7 +27,7 @@ const GitHubRepoURL = () => {
 
 const GitHubInfo = () => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div style={{ textAlign: "center" }}>
       <h1>My GitHub Information</h1>
       <GitHubAvatar />
       <GitHubRepoURL />

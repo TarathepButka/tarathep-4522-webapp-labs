@@ -1,12 +1,12 @@
-import React from 'react';
-import { GitHubAvatar, GitHubRepoURL } from './github_data';
-import './App.css';
+import React from "react";
+import { GitHubAvatar, GitHubRepoURL } from "./github_data";
+import "./App.css";
 
-function App() {
+function GitHubInfo() {
   const userInfo = {
     url: "https://github.com/TarathepButka",
     imgurl: "https://avatars.githubusercontent.com/u/119283428?v=4",
-    alt:"Tarathep Butka"
+    alt: "Tarathep Butka",
   };
   return (
     <div className="App">
@@ -17,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default GitHubInfo;
