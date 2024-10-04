@@ -1,4 +1,3 @@
-import React from "react";
 import { GitHubAvatar, GitHubRepoURL } from "./github_data";
 import "./App.css";
 
