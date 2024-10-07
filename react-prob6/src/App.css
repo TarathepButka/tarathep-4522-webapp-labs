@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+}
+
+.prev-btn {
+  background-color: orange;
+  margin: 20px;
+}
+
+.next-btn {
+  background-color: greenyellow;
+  margin: 20px;
+}
+.show-btn {
+  background-color: lightblue;
+  margin: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
