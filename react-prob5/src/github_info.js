@@ -1,30 +1,20 @@
 export const GitHubInfo = ({ size = 100, userInfo }) => {
-  let ismorethan = userInfo.followers >= 10000;
-  if(ismorethan){
-    return (
-      <li>
-        <img
-        src={userInfo.imgURL}
-        alt="GitHub Avatar"
-        width={size}
-        height={size}
-      />
-        <a href={userInfo.url} target="_blank" rel="noopener noreferrer">
-          {userInfo.alt} ({userInfo.followers} followers)
-        </a>
-      </li>
-    );
-  }return (
-    <li>
+  const popular = userInfo.filter((userpop) => userpop.followers > 10000);
+  const popularUsers = popular.map((userpop) => (
+    <li key={userpop.url}>
       <img
-        src={userInfo.imgURL}
+        src={userpop.imgURL}
         alt="GitHub Avatar"
         width={size}
         height={size}
       />
-      <a href={userInfo.url} target="_blank" rel="noopener noreferrer">
-        {userInfo.alt}
-      </a>
+      <span>
+        <a href={userpop.url} target="_blank" rel="noopener noreferrer">
+          {userpop.alt}
+        </a>{" "}
+        ({userpop.followers} followers)
+      </span>
     </li>
-  );
+  ));
+  return <ol>{popularUsers}</ol>;
 };
